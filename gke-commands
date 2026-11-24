@@ -1,0 +1,11 @@
+sudo apt update 
+    2  sudo apt install kubectl 
+    3  sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin -y
+    8  gcloud auth login
+    9  gcloud container clusters get-credentials cluster-1 --region asia-south1
+   10  kubectl get nodes
+   11  kubectl run nginx --image=nginx:latest
+   12  kubectl get pod
+   14  kubectl create deployment my-dep --image=nginx:latest
+   16  kubectl scale deployment my-dep --replicas=5
+   17  kubectl get pods
